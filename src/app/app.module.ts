@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RolComponent } from './pages/rol/rol.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GrupoComponent } from './pages/grupo/grupo.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { GrupoComponent } from './pages/grupo/grupo.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
