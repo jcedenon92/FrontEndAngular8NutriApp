@@ -8,19 +8,27 @@ import { RolComponent } from './pages/rol/rol.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GrupoComponent } from './pages/grupo/grupo.component';
 import { MaterialModule } from './material/material.module';
+import { RolEdicionComponent } from './pages/rol/rol-edicion/rol-edicion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { GrupoDialogoComponent } from './pages/grupo/grupo-dialogo/grupo-dialogo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RolComponent,
-    GrupoComponent
+    GrupoComponent,
+    RolEdicionComponent,
+    GrupoDialogoComponent
   ],
+  entryComponents: [GrupoDialogoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

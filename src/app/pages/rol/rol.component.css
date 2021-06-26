@@ -5,16 +5,18 @@
 }
 
 .example-header {
-  min-height: 64px;
-  padding: 8px 24px 0;
+  margin: auto;
+  width: 80%;
 }
 
 .mat-form-field {
+  margin-top: 8px;
+  margin-bottom: 8px;
   font-size: 14px;
   width: 100%;
 }
 
 .mat-table {
-  overflow: auto;
-  max-height: 500px;
+  margin: auto;
+  width: 80%;
 }
