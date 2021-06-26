@@ -1,3 +1,4 @@
+import { TurnocomidaComponent } from './pages/turnocomida/turnocomida.component';
 import { GrupoComponent } from './pages/grupo/grupo.component';
 import { RolComponent } from './pages/rol/rol.component';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,9 @@ const routes: Routes = [
   },
   {
     path: 'grupo', component: GrupoComponent
+  },
+  {
+    path: 'turnocomida', component: TurnocomidaComponent
   }
 ];
 

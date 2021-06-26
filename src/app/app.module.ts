@@ -11,6 +11,8 @@ import { MaterialModule } from './material/material.module';
 import { RolEdicionComponent } from './pages/rol/rol-edicion/rol-edicion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GrupoDialogoComponent } from './pages/grupo/grupo-dialogo/grupo-dialogo.component';
+import { TurnocomidaComponent } from './pages/turnocomida/turnocomida.component';
+import { TurnocomidaDialogoComponent } from './pages/turnocomida/turnocomida-dialogo/turnocomida-dialogo.component';
 
 @NgModule({
   declarations: [
@@ -18,9 +20,14 @@ import { GrupoDialogoComponent } from './pages/grupo/grupo-dialogo/grupo-dialogo
     RolComponent,
     GrupoComponent,
     RolEdicionComponent,
-    GrupoDialogoComponent
+    GrupoDialogoComponent,
+    TurnocomidaComponent,
+    TurnocomidaDialogoComponent
   ],
-  entryComponents: [GrupoDialogoComponent],
+  entryComponents: [
+    GrupoDialogoComponent,
+    TurnocomidaDialogoComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
