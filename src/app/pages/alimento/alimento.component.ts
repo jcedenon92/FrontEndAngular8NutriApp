@@ -20,18 +20,18 @@ export class AlimentoComponent implements OnInit {
     'cantidad',
     'energyKcal',
     /*'energyKj',
-    'water',
+    'water',*/
     'prot',
     'fat',
-    'choCdf',
+    /*'choCdf',*/
     'choAvl',
-    'fib',
+    /*'fib',
     'fibTg',
     'ash',
     'ca',
-    'p',
+    'p',*/
     'zn',
-    */'fe',
+    'fe',
     /*'beta',
     'retinol',
     'vitA',
