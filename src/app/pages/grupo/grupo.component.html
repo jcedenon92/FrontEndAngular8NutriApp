@@ -6,13 +6,13 @@
 </div>
 
 <mat-table [dataSource]="dataSource" matSort>
-  <ng-container matColumnDef="idGrupo">
+  <ng-container matColumnDef="idGrupo" required>
     <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{row.idGrupo}} </mat-cell>
   </ng-container>
 
   <ng-container matColumnDef="nombre">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef mat-sort-header required> Nombre </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{row.nombre}}</mat-cell>
   </ng-container>
 

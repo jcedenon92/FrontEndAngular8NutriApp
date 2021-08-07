@@ -11,7 +11,7 @@ import { TurnoComida } from 'src/app/_model/turnocomida';
   styleUrls: ['./turnocomida.component.css']
 })
 export class TurnocomidaComponent implements OnInit {
-
+ 
   dataSource: MatTableDataSource<TurnoComida>;
   displayedColumns = ['idTurnoComida', 'nombre', 'acciones'];
 

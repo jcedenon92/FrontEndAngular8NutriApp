@@ -8,11 +8,11 @@
   </div>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Nombre" minlength="2" formControlName="nombre">
+    <input matInput placeholder="Nombre" minlength="2" formControlName="nombre" required>
   </mat-form-field>
 
   <mat-form-field class="example-full-width">
-    <input matInput placeholder="Descripcion" minlength="2" formControlName="descripcion">
+    <input matInput placeholder="Descripcion" minlength="2" formControlName="descripcion" required>
   </mat-form-field>
 
   <button mat-raised-button color="primary" type="submit" [disabled]="frmRol.invalid">

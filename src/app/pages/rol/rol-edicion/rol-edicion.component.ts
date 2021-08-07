@@ -2,7 +2,7 @@ import { RolService } from 'src/app/_service/rol.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { Rol } from 'src/app/_model/paciente';
+import { Rol } from 'src/app/_model/rol';
 
 @Component({
   selector: 'app-rol-edicion',

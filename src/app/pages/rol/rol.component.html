@@ -7,7 +7,7 @@
 
 <mat-table [dataSource]="dataSource" matSort>
   <ng-container matColumnDef="idRol">
-    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef required mat-sort-header> ID </mat-header-cell>
     <mat-cell *matCellDef="let row"> {{row.idRol}} </mat-cell>
   </ng-container>
 

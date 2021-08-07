@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatSnackBar, MatSort, MatTableDataSource } from '@angular/material';
-import { Rol } from 'src/app/_model/paciente';
+import { Rol } from 'src/app/_model/rol';
 import { RolService } from 'src/app/_service/rol.service';
 
 @Component({
@@ -16,7 +16,10 @@ export class RolComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
 
-  constructor(private rolService: RolService, private snack : MatSnackBar) { }
+  constructor(
+    private rolService: RolService,
+    private snack : MatSnackBar
+    ) { }
 
   ngOnInit() {
     //se ejecutará "n" veces se use el metodo next
@@ -34,6 +37,7 @@ export class RolComponent implements OnInit {
 
     //Se ejecuta al cargar la pagina por unica vez
     this.rolService.listar().subscribe(data => {
+      console.log(data);
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

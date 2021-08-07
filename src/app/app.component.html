@@ -26,42 +26,48 @@
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container">
-      <mat-sidenav #sidenav style="width: 200px">
-          <img src="assets/comidas.png" width="128" style="margin-left: 20px">
+      <mat-sidenav #sidenav style="width: 300px">
+          <img src="assets/comidas.png" width="220" style="margin-left: 20px">
 
           <button mat-menu-item (click)="sidenav.toggle()" routerLink="/buscar" style="cursor: pointer">
               <mat-icon>search</mat-icon>
               <span>Buscar</span>
           </button>
           <mat-divider></mat-divider>
+          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/rol" style="cursor: pointer">
+              <mat-icon>insert_drive_file</mat-icon>
+              <span>Gestion de Roles de Acceso</span>
+          </button>
+          <mat-divider></mat-divider>
           <button mat-menu-item (click)="sidenav.toggle()" routerLink="/grupo" style="cursor: pointer">
               <mat-icon>insert_drive_file</mat-icon>
-              <span>Grupos</span>
+              <span>Gestion de Grupos de Alimentos</span>
           </button>
           <mat-divider></mat-divider>
-          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/consulta-especial" style="cursor: pointer">
-              <mat-icon>insert_drive_file</mat-icon>
-              <span>Registrar E.</span>
+          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/alimento" style="cursor: pointer">
+              <mat-icon>database-tick</mat-icon>
+              <span>Base de Datos de Alimentos</span>
           </button>
           <mat-divider></mat-divider>
-          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/especialidad" style="cursor: pointer">
+          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/plan" style="cursor: pointer">
               <mat-icon>star_rate</mat-icon>
-              <span>Especialidades</span>
+              <span>Gestion de Días de Plan Alimenticio</span>
           </button>
           <mat-divider></mat-divider>
-          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/medico" style="cursor: pointer">
+          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/vacuna" style="cursor: pointer">
               <mat-icon>healing</mat-icon>
-              <span>Médicos</span>
+              <span>Gestión de Vacunas</span>
           </button>
           <mat-divider></mat-divider>
-          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/examen" style="cursor: pointer">
+          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/turnocomida" style="cursor: pointer">
               <mat-icon>assignment</mat-icon>
-              <span>Examenes</span>
+              <span>Gestión de Turnos de Comida</span>
           </button>
           <mat-divider></mat-divider>
-          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/paciente" style="cursor: pointer">
-              <mat-icon>accessibility</mat-icon>
-              <span>Pacientes</span>
+          <mat-divider></mat-divider>
+          <button mat-menu-item (click)="sidenav.toggle()" routerLink="/control" style="cursor: pointer">
+              <mat-icon>assessment</mat-icon>
+              <span>Controles</span>
           </button>
           <mat-divider></mat-divider>
           <button mat-menu-item (click)="sidenav.toggle()" routerLink="/reporte" style="cursor: pointer">
@@ -71,6 +77,12 @@
       </mat-sidenav>
       <mat-sidenav-content>
           <router-outlet></router-outlet>
+          <!--mat-grid-list-- cols="2" rowHeight="2:1">
+            <mat-grid-tile class="column"><img src="assets/crec.png" width="600"></mat-grid-tile>
+            <mat-grid-tile class="column"><img src="assets/bd.png" width="400"> </mat-grid-tile>
+            <mat-grid-tile class="column"><img src="assets/diet.png" width="300"></mat-grid-tile>
+            <mat-grid-tile class="column"><img src="assets/vacu.png" width="400"></mat-grid-tile>
+          </!--mat-grid-list-->
       </mat-sidenav-content>
   </mat-sidenav-container>
 

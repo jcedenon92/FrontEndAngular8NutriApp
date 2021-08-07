@@ -1,0 +1,11 @@
+<mat-toolbar>Registro de Paciente</mat-toolbar>
+
+<div class="example-container">
+  <mat-form-field>
+    <mat-select placeholder="Paciente">
+      <mat-option *ngFor="let p of pacientes" [value]="p.idPaciente">
+        {{p.nombres}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

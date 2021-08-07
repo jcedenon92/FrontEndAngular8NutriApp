@@ -1,0 +1,27 @@
+<div>
+  <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Escoge una fecha" [max]="maxFecha" [(ngModel)]="fechaSeleccionada">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Edad en mes" [(ngModel)]="control.edadMes">
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Peso" [(ngModel)]="control.peso">
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Estatura" [(ngModel)]="control.estatura">
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Cabeza" [(ngModel)]="control.cabeza">
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Observacion" [(ngModel)]="control.observacion">
+  </mat-form-field>
+  <!--<mat-form-field>
+      <input matInput placeholder="Paciente" [(ngModel)]="control.paciente">
+  </mat-form-field>-->
+</div>
+<button mat-raised-button color="primary" (click)="operar()">Aceptar</button>
+<button mat-raised-button color="accent" (click)="cancelar()">Cancelar</button>

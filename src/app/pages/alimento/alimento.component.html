@@ -1,0 +1,153 @@
+<router-outlet></router-outlet>
+<div class="example-header">
+  <mat-form-field>
+    <input matInput (keyup)="filtrar($event.target.value)" placeholder="Buscar Alimento">
+  </mat-form-field>
+</div>
+
+<mat-table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="idAlimento">
+    <mat-header-cell *matHeaderCellDef required mat-sort-header> ID </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.idAlimento}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nombre">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.nombre}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="cantidad">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Cant/gramos </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.cantidad}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="energyKcal">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Energia/Kcal </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.energyKcal}} </mat-cell>
+  </ng-container>
+<!--
+  <ng-container matColumnDef="energyKj">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Energia/Kj </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.energyKj}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="water">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Agua </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.water}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="prot">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Proteina </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.prot}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="fat">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Grasas </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.fat}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="choCdf">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> choCdf </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.choCdf}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="choAvl">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> choAvl </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.choAvl}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="fib">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> fib </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.fib}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="fibTg">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> fibTg </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.fibTg}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="ash">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> ash </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.ash}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="ca">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> ca </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.ca}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="p">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> p </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.p}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="zn">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> zn </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.zn}} </mat-cell>
+  </ng-container>
+-->
+  <ng-container matColumnDef="fe">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> fe </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.fe}} </mat-cell>
+  </ng-container>
+<!--
+  <ng-container matColumnDef="beta">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> beta </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.beta}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="retinol">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> retinol </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.retinol}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="vitA">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> vitA </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.vitA}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="thia">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> thia </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.thia}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="ribf">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> ribf </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.ribf}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nia">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> nia </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.nia}} </mat-cell>
+  </ng-container>
+-->
+  <ng-container matColumnDef="vitC">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> vitC </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.vitC}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="grupo">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> grupo </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.grupo.nombre}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="acciones">
+    <mat-header-cell *matHeaderCellDef>Acciones</mat-header-cell>
+    <mat-cell *matCellDef="let row">
+      <button mat-button color="primary" (click)="abrirDialogo(row)"><mat-icon>edit</mat-icon></button>
+      <button mat-button color="accent" (click)="eliminar(row)"><mat-icon>delete</mat-icon></button>
+    </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;">
+
+  </mat-row>
+</mat-table>
+
+<mat-paginator [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+
+<br>
+<button mat-fab color="accent" (click)="abrirDialogo()" style="float: right; margin-right: 20px" >
+  <mat-icon>create</mat-icon>
+</button>

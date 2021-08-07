@@ -40,5 +40,4 @@ export class GrupoService {
     return this.http.delete(`${this.url}/${idGrupo}`);
   }
 
-
 }
