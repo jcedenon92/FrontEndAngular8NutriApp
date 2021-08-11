@@ -15,6 +15,7 @@ import { PlanComponent } from './pages/plan/plan.component';
 import { DetalleplanComponent } from './pages/detalleplan/detalleplan.component';
 import { PrediccionComponent } from './pages/prediccion/prediccion.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
+import { LoginComponent } from './pages/login/login.component';
 
 //Sistema de rutas
 const routes: Routes = [
@@ -62,6 +63,12 @@ const routes: Routes = [
   },
   {
     path: 'reporte', component: ReporteComponent
+  },
+  {
+    path: 'login', component: LoginComponent
+  },
+  {
+    path: '', redirectTo: 'login', pathMatch: 'full'
   }
 ];
 

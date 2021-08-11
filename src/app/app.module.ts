@@ -30,7 +30,14 @@ import { ControlDialogoComponent } from './pages/control/control-dialogo/control
 import { DosisDialogoComponent } from './pages/dosis/dosis-dialogo/dosis-dialogo.component';
 import { PrediccionComponent } from './pages/prediccion/prediccion.component';
 import { ReporteComponent } from './pages/reporte/reporte.component';
+import { LoginComponent } from './pages/login/login.component';
+import { JwtModule } from '@auth0/angular-jwt';
+import { environment } from 'src/environments/environment';
 
+export function tokenGetter(){
+  let tk = sessionStorage.getItem(environment.TOKEN_NAME);
+  return tk != null ? tk : '';
+}
 
 @NgModule({
   declarations: [
@@ -57,7 +64,8 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
     ControlDialogoComponent,
     DosisDialogoComponent,
     PrediccionComponent,
-    ReporteComponent
+    ReporteComponent,
+    LoginComponent
   ],
   entryComponents: [
     GrupoDialogoComponent,
@@ -75,7 +83,14 @@ import { ReporteComponent } from './pages/reporte/reporte.component';
     HttpClientModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        whitelistedDomains: ['localhost:8080'],
+        blacklistedRoutes: ['http://localhost:8080/login/enviarCorreo']
+      }
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

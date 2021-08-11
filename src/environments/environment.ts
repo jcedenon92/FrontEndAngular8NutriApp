@@ -5,7 +5,10 @@
 export const environment = {
   production: false,
   HOST: 'http://localhost:8080',
-  HOST2: 'http://localhost:5000'
+  HOST2: 'http://localhost:5000',
+  TOKEN_AUTH_USERNAME: 'jcedenutriapp',
+  TOKEN_AUTH_PASSWORD: 'jcede92code',
+  TOKEN_NAME: 'access_token'
 };
 
 /*

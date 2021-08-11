@@ -1,7 +1,7 @@
 import { MatPaginatorImpl } from './mat-paginator';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatSortModule, MatPaginatorModule, MatCardModule, MatSnackBarModule, MatSidenavModule, MatMenuModule, MatToolbarModule, MatDividerModule, MatExpansionModule, MatDialogModule, MatPaginatorIntl, MatGridListModule, MatSelectModule, MatCellDef, MatDatepickerModule, MatNativeDateModule, MAT_DATE_LOCALE } from '@angular/material';
+import { MatTableModule, MatButtonModule, MatFormFieldModule, MatInputModule, MatIconModule, MatSortModule, MatPaginatorModule, MatCardModule, MatSnackBarModule, MatSidenavModule, MatMenuModule, MatToolbarModule, MatDividerModule, MatExpansionModule, MatDialogModule, MatPaginatorIntl, MatGridListModule, MatSelectModule, MatCellDef, MatDatepickerModule, MatNativeDateModule, MAT_DATE_LOCALE, MatCheckboxModule, MatAutocompleteModule, MatStepperModule, MatSlideToggleModule } from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -20,12 +20,16 @@ import { MatTableModule, MatButtonModule, MatFormFieldModule, MatInputModule, Ma
     MatMenuModule,
     MatToolbarModule,
     MatDividerModule,
-    MatExpansionModule,
     MatDialogModule,
-    MatGridListModule,
+    MatCheckboxModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatExpansionModule,
+    MatAutocompleteModule,
+    MatStepperModule,
+    MatSlideToggleModule,
+    MatGridListModule
   ],exports:[
     MatButtonModule,
     MatTableModule,
@@ -40,13 +44,16 @@ import { MatTableModule, MatButtonModule, MatFormFieldModule, MatInputModule, Ma
     MatMenuModule,
     MatToolbarModule,
     MatDividerModule,
-    MatExpansionModule,
     MatDialogModule,
-    MatGridListModule,
+    MatCheckboxModule,
     MatSelectModule,
-    MatCardModule,
     MatDatepickerModule,
-    MatNativeDateModule
+    MatNativeDateModule,
+    MatExpansionModule,
+    MatAutocompleteModule,
+    MatStepperModule,
+    MatSlideToggleModule,
+    MatGridListModule
   ],
   providers: [
     { provide: MatPaginatorIntl, useClass: MatPaginatorImpl},
